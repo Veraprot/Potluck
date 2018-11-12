@@ -1,0 +1,19 @@
+body {
+  margin: 0px;
+
+  .navbar {
+    background-color: lavender;
+    height: 60px;
+    width: 100%;
+    
+    .navbar-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      .link {
+        margin-right: 10px;
+      }
+    }
+  }
+}
