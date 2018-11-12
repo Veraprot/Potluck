@@ -1,2 +1,4 @@
-class DishesController < ApplicationController 
-end 
+class DishesController < ApplicationController
+  def index
+  end 
+end
