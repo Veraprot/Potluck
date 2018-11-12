@@ -19,6 +19,7 @@ class DishesController < ApplicationController
     else
       flash[:errors] = @dish.errors.full_messages
     end
+
   end
 
   def show
@@ -49,4 +50,7 @@ class DishesController < ApplicationController
     @dish = Dish.find_by(id: params[:id])
   end
 end # end of controller
+<<<<<<< HEAD
  
+=======
+>>>>>>> add origin
