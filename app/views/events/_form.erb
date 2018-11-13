@@ -1,6 +1,7 @@
 <%= simple_form_for @event do |f| %>
-  <%= f.input :name %>
-  <%= f.input :date %>
+  <%= f.input :name, label:'Name:' %>
+  <%= f.input :date, label:'Date:', as: :date %>
+  <%= f.input :time, label:'Time:', as: :time %>
   <%= f.input :description %>
   <%= f.input :location %>
   <%= f.button :submit %>
