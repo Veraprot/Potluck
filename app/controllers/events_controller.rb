@@ -16,7 +16,12 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.create(event_params)
-    #TODO Add validation 
+    if @event.valid?
+      redirect_to @event
+    else
+      flash[:errors] = @event.errors.full_messages
+      redirect_to new_event_path
+    end
   end
 
   def edit
@@ -25,12 +30,14 @@ class EventsController < ApplicationController
 
   def update
     # before_action finds the instance
+    @event.update(event_params)
+    redirect_to @event
   end
 
   private
 
     def event_params
-      params.require(:event).permit(:name,:date)
+      params.require(:event).permit(:name,:date,:description,:location)
     end
 
     def find_event
