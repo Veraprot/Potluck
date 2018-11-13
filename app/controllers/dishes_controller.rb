@@ -11,8 +11,14 @@ class DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.create(dish_params)
+    @dish = Dish.new(dish_params)
     #TODO Add validation
+    if @dish.valid?
+      @dish.save
+      redirect_to @dish
+    else
+      flash[:errors] = @dish.errors.full_messages
+    end
   end
 
   def show
