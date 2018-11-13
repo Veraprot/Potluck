@@ -1,0 +1,10 @@
+<h1>Create a new dish</h1>
+
+<% if flash[:errors] %>
+  <% flash[:errors].each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+<% end %>
+
+<%= render 'form' %>
+
