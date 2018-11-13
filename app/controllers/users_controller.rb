@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:edit, :update, :show]
-
-  def index
-    @users = User.all
-  end
+  # before_action :find_user, only: [:edit, :update, :show]
 
   def show
     # before_action finds the instance
