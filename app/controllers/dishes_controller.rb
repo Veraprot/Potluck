@@ -54,7 +54,4 @@ class DishesController < ApplicationController
     @dish = Dish.find_by(id: params[:id])
   end
 end # end of controller
-<<<<<<< HEAD
- 
-=======
->>>>>>> add origin
+
