@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :events, only: %i[index new show create edit update]
 
   match 'user_root' => 'users#show', :via => [:get]
-  resources :dishes, only: %i[index new show create edit update destroy]
+  resources :dishes
+
 end
