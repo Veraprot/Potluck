@@ -9,6 +9,14 @@ class UsersController < ApplicationController
     # before_action finds the instance
   end
 
+  def edit
+    # before_action finds the instance
+  end
+
+  def update
+    # before_action finds the instance
+  end
+
   def new
     @user = User.new
   end
