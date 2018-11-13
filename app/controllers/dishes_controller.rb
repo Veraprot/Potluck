@@ -1,6 +1,6 @@
 class DishesController < ApplicationController
   before_action :find_dish, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!, only: [:create,:edit,:destroy]
 
   def index
     @dishes = Dish.all

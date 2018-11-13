@@ -3,6 +3,7 @@
   <%= f.input :date, label:'Date :', as: :date, start_year: Date.today.year,
                                                 end_year: Date.today.year + 15,
                                                 order: [:month,:year,:day]%>
+                                                
   <%= f.input :time, label:'Time :', as: :time %>
   <%= f.input :description, label:'Description :' %>
   <%= f.input :location %>
