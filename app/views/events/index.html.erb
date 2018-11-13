@@ -1,5 +1,6 @@
-<h1>All events</h1>
+<h1>All Potlucks</h1>
 
 <% @events.each do |event| %>
-  <%= event.name %> - <%= event.date %><br>
+  Potluck: <%= link_to event.name, event %> <br>
+  Date: <%= event.date %><br>
 <% end %>
