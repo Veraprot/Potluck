@@ -49,10 +49,6 @@ class DishesController < ApplicationController
   def find_dish
     @dish = Dish.find_by(id: params[:id])
   end
-<<<<<<< HEAD
-=======
-
->>>>>>> dish controller and associate views
 end # end of controller
 <<<<<<< HEAD
  
