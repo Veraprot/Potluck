@@ -1,2 +1,7 @@
 <p>here somehow</p>
-<%= image_tag(current_user.avatar.url(:thumb)) %>
+<%= image_tag(current_user.avatar.url(:thumb)) %><br>
+Name: <%= current_user.name %> <br>
+Email: <%= current_user.email %> <br>
+Location: <%= current_user.location %><br>
+About: <%= current_user.bio %><br>
+
