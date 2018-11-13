@@ -4,6 +4,4 @@ Rails.application.routes.draw do
 
 root to: 'home#index'
   resources :events, only: %i[index new show create edit update]
-  resources :users , only: %i[index show new create]
-
 end
