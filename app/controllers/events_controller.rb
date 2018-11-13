@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
 
-  before_action :find_event, only: [:show, :edit, :update]
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only:[:create,:edit,:destroy]
+  
 
   def index
     @events = Event.all
@@ -16,8 +18,11 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(event_params)
+    @user = current_user
+    @event = Event.new(event_params)
+    @event.user = current_user #that devise magic
     if @event.valid?
+      @event.save
       redirect_to @event
     else
       flash[:errors] = @event.errors.full_messages
@@ -35,6 +40,10 @@ class EventsController < ApplicationController
     redirect_to @event
   end
 
+  def destroy
+    @event.destroy    
+  end
+
   private
 
     def event_params
@@ -45,4 +54,4 @@ class EventsController < ApplicationController
       @event = Event.find_by(id: params[:id])
     end
 
-end
+end # END OF EVENTS CONTROLLER

@@ -1,7 +1,6 @@
 class DishesController < ApplicationController
   before_action :find_dish, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:create]
-  # TODO: how do we tie in whether the user is logged in?
 
   def index
     @dishes = Dish.all
@@ -15,7 +14,6 @@ class DishesController < ApplicationController
     @user = current_user
     @dish = Dish.new(dish_params)
     @dish.user = current_user # suga
-    #TODO Add validation
     if @dish.valid?
       @dish.save
       redirect_to @dish
@@ -35,6 +33,8 @@ class DishesController < ApplicationController
 
   def update
     # before_action finds the instance
+    @dish.update(dish_params)
+    redirect_to @dish
   end
 
   def destroy

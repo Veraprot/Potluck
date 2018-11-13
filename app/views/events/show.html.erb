@@ -5,3 +5,5 @@ Date: <%= @event.date %> <br>
 Time: <%= @event.time %> <br>
 Description: <%= @event.description %> <br>
 Location: <%= @event.location %> <br>
+
+<%= button_to "You Sure You Wanna Destroy this Potluck DAWG?", @event, :method => :delete %>
