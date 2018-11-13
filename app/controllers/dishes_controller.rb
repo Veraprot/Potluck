@@ -19,7 +19,6 @@ class DishesController < ApplicationController
     else
       flash[:errors] = @dish.errors.full_messages
     end
-
   end
 
   def show
