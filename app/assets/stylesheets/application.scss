@@ -1,19 +1,7 @@
-body {
-  margin: 0px;
+@import "navbar.scss";
+@import "registration-forms.scss";
 
-  .navbar {
-    background-color: lavender;
-    height: 60px;
-    width: 100%;
-    
-    .navbar-links {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-
-      .link {
-        margin-right: 10px;
-      }
-    }
-  }
+abbr[title], 
+acronym[title] {
+  display: none;
 }

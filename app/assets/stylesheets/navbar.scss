@@ -1,0 +1,15 @@
+body { 
+  .navbar {
+    background-color: lavender;
+    height: 60px;
+    width: 100%;
+    
+    .navbar-links {
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+}
