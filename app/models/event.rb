@@ -10,6 +10,11 @@ class Event < ApplicationRecord
   validates_presence_of :time, on: :create, message: "Please pick a time for your potluck"
   validates_presence_of :location, on: :create, message: "Please pick a location for your potluck"
 
-
+  def format_time(event)
+    formatted_time = DateTime.parse("#{event[:hour]}:#{event[:minute]}#{event[:meridiem]}")
+    self.time = formatted_time.strftime("%I:%M%p")
+    byebug
+    self.save
+  end
 
 end

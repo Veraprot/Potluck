@@ -17,10 +17,16 @@ class EventsController < ApplicationController
     # before_action finds the instance
   end
 
+  def time_format(string)
+    string.strftime()
+  end
+
   def create
     @user = current_user
     @event = Event.new(event_params)
+    @event.format_time(params[:event])
     # @event.user  = current_user #that devise magic
+    byebug
     if @event.valid?
       @event.save
       @event_user = EventUser.create(event_id: @event.id, user_id: current_user.id)
@@ -49,12 +55,13 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy    
+    redirect_to events_path
   end
 
   private
 
     def event_params
-      params.require(:event).permit(:name,:date,:time,:description,:location)
+      params.require(:event).permit(:name,:date,:description,:location)
     end
 
     def find_event
