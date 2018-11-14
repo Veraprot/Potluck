@@ -8,5 +8,6 @@ Location: <%= @event.location %> <br>
 
 <%= button_to "You Sure You Wanna Destroy this Potluck DAWG?", @event, :method => :delete %>
 <!-- hide this button if current user is not host  -->
-<%= link_to "join_event", new_dish_path(:event_id => @event.id) %>
+<%= link_to "join_event", new_dish_event_path(@event) %>
+
 <!-- this link should show if youre joined already -->

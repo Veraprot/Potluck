@@ -6,22 +6,18 @@ class DishesController < ApplicationController
     @dishes = Dish.all
   end
 
-  def new
-    @dish = Dish.new
-  end
-
-  def create
-    @user = current_user
-    @dish = Dish.new(dish_params)
-    @dish.user = current_user # suga
-    if @dish.valid?
-      @dish.save
-      redirect_to @dish
-    else
-      flash[:errors] = @dish.errors.full_messages
-      redirect_to new_dish_path
-    end
-  end
+  # def create
+  #   @user = current_user
+  #   @dish = Dish.new(dish_params)
+  #   @dish.user = current_user # suga
+  #   if @dish.valid?
+  #     @dish.save
+  #     redirect_to @dish
+  #   else
+  #     flash[:errors] = @dish.errors.full_messages
+  #     redirect_to new_dish_path
+  #   end
+  # end
 
   def show
     # before_action finds the instance
@@ -43,11 +39,30 @@ class DishesController < ApplicationController
     redirect_to dishes_path
   end
 
+  def new
+    @dish = Dish.new
+    # render :new
+  end
+
+  def create
+    byebug
+    @user = current_user
+    @dish = Dish.new(dish_params)
+    # @dish.user = current_user # suga
+    if @dish.valid?
+      @dish.save
+      redirect_to @dish
+    else
+      flash[:errors] = @dish.errors.full_messages
+      redirect_to new_dish_path
+    end
+  end
+
 
   private
 
   def dish_params
-    params.require(:dish).permit(:name, :description)
+    params.require(:dish).permit(:name, :description, :event_id, :user_id)
   end
 
   def find_dish
