@@ -2,6 +2,7 @@ class Event < ApplicationRecord
   # Associations
   has_many :event_users
   has_many :users, through: :event_users
+  has_many :dishes
 
   # Validation
   validates_presence_of :name, on: :create, message: "Please pick a name for your potluck"
