@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed');
 
+// fonts 
 $roboto: 'Roboto Condensed', sans-serif;
+$pacifico: 'Pacifico', cursive;
+
+// colors
 $powder: #8FD8D2;
 $peach: #FEDCD2;
 $warm: #DF744A;
 $lemon: #DCB239;
 $ocean-grey: #394858;
 
+@import "home.scss";
 @import "navbar.scss";
 @import "registration-forms.scss";
 @import "profile-view.scss";
@@ -17,13 +23,17 @@ acronym[title] {
 }
 
 body {
+  background-image: url('/assets/potluck-dinner-7.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
   a,
   h1, 
   h4,
   p {
     margin: 0px;
     font-family: $roboto;
-    color: black;
+    color: white;
   }
 
   a {

@@ -17,6 +17,18 @@ body {
       justify-content: space-between;
       align-items: center;
 
+      .page-link-container {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        
+        .page-link {
+          margin-left: 50px;
+        }
+      }
+
       .registration-links {
         display: flex;
         align-items: center;

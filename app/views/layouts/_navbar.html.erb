@@ -1,7 +1,7 @@
 <div class="navbar-links">
-  <div class="link">
-    <%= link_to "events", events_path %>
-    <%= link_to "about", root_path %>
+  <div class="page-link-container">
+    <%= link_to "Events", events_path, class: "page-link" %>
+    <%= link_to "About", root_path, class: "page-link" %>
   </div>
   <div class="registration-links">
     <% if user_signed_in? %>
