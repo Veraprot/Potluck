@@ -10,7 +10,9 @@ $powder: #8FD8D2;
 $peach: #FEDCD2;
 $warm: #DF744A;
 $lemon: #DCB239;
-$ocean-grey: #394858;
+$ocean-grey: rgba(57,72,88, 1);
+$ocean-grey-background: rgba(57,72,88, 0.8);
+$black-background: rgba(0, 0, 0, 0.8);
 
 @import "home.scss";
 @import "navbar.scss";
