@@ -19,7 +19,9 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %> -->
-      <%= yield %>
+      <div class="body-inner-container">
+        <%= yield %>
+      </div>
     <div class="footer"></div>
   </body>
 </html>
