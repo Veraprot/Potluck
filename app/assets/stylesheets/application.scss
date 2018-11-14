@@ -16,7 +16,7 @@ $black-background: rgba(0, 0, 0, 0.8);
 
 @import "home.scss";
 @import "navbar.scss";
-@import "registration-forms.scss";
+@import "forms.scss";
 @import "profile-view.scss";
 
 abbr[title], 
@@ -27,10 +27,12 @@ acronym[title] {
 html,
 body {
   height: 100%;
+  margin: 0px;
   background-image: url('/assets/potluck-dinner-7.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-
+  
+  label,
   a,
   h1, 
   h4,

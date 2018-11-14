@@ -1,0 +1,58 @@
+.profile-card-outer-container,
+.form-wrapper { 
+  margin: 10% auto;
+  padding: 5%;
+  width: 65%;
+  background-color: $ocean-grey-background;
+  border-radius: 5px;
+
+  h1 {
+    padding-bottom: 10px;
+  }
+}
+
+.form-wrapper {
+  .form-outer-container {
+    form {
+      .string {
+        input[type=text], 
+        .test select {
+          width: 100%;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-shadow: inset 0 1px 3px #ddd;
+          border-radius: 4px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+      }
+
+      select {
+        width: 20%;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 3px #ddd;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      .new-action-button {
+        margin-top: 15px;
+        padding: 15px;
+      }
+    }
+  }
+}
