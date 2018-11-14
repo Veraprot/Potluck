@@ -1,0 +1,28 @@
+body { 
+  .profile-card-outer-container {
+    margin: 0 auto;
+    width: 65%;
+    .profile-card-container { 
+      display: flex;
+
+      .profile-image-container {
+        img {
+          border-radius: 13%;
+        }
+      }
+
+      .profile-info-container {
+        margin-left: 15px;
+        
+        h4 {
+          font-size: 18px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  .new-action-button {
+    padding-top: 20px;
+  }
+}

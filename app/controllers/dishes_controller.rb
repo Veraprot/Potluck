@@ -45,12 +45,11 @@ class DishesController < ApplicationController
   end
 
   def create
-    @user = current_user
+    @event = Event.find_by(id: params[:id])
     @dish = Dish.new(dish_params)
-    # @dish.user = current_user # suga
     if @dish.valid?
       @dish.save
-      redirect_to @dish
+      redirect_to event_path(@dish.event_id)
     else
       flash[:errors] = @dish.errors.full_messages
       redirect_to new_dish_path

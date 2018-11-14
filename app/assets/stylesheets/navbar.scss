@@ -1,20 +1,33 @@
 body { 
   .navbar {
-    background-color: lavender;
+    background-color: $ocean-grey;
     height: 60px;
     width: 100%;
+    overflow: hidden;
     
+    a {
+      color: rgba(255, 255, 255, 1);
+    }
+
     .navbar-links {
-      padding: 20px 10px;
+      padding: 0px 10px;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
+      align-items: center;
 
       .registration-links {
-        img {
-          height: 100px;
-          width: auto;
+        display: flex;
+        align-items: center;
+
+        .avatar-image {
+          height: 50px;
+          border-radius: 50%;
+        }
+        
+        .navbar-link {
+          padding-left: 8px;
         }
       }
     }

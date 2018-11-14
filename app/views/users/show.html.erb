@@ -1,9 +1,24 @@
-<h1>Profile - <%= current_user.name %></h1>
-<%= image_tag(current_user.avatar.url(:thumb)) %><br>
-Name: <%= current_user.name %> <br>
-Email: <%= current_user.email %> <br>
-Location: <%= current_user.location %><br>
-About: <%= current_user.bio %><br>
-
-<%= link_to "Create a new potluck", new_event_path %>
-
+<div class="profile-card-outer-container">
+  <h1>My Profile</h1>
+  <div class="profile-card-container">
+    <div class="profile-image-container">
+        <%= image_tag(current_user.avatar.url(:thumb), :class => "avatar-image") %>
+    </div>
+    <div class="profile-info-container">
+      <h4>Name: <%= current_user.name %> </h4>
+      <h4>Email: <%= current_user.email %> </h4>
+      <h4>Location: <%= current_user.location %></h4>
+    </div>
+  </div>
+  <div class="profile-body-container">
+    <h4>About: 
+      <p><%= current_user.bio %>
+            <!-- start slipsum code -->
+      Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+      </p>
+    </h4>
+  </div>
+  <div class="new-action-button">
+    <%= button_to "Create a new potluck", new_event_path, method: "get" %>
+  </div>
+</div>

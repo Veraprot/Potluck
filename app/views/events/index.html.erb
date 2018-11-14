@@ -13,7 +13,7 @@
     <div class="user-thumbnails">
       <% event.users.each do |user| %>
         <div class="thumbnail">
-          <%= image_tag(user.avatar.url(:thumb)) %>
+          <%= image_tag(user.avatar.url(:thumb), :class => "avatar-image") %>
         </div>
       <% end %>
     </div>

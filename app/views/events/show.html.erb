@@ -6,6 +6,25 @@ Time: <%= @event.time %> <br>
 Description: <%= @event.description %> <br>
 Location: <%= @event.location %> <br>
 
+<table>
+  <thead>
+    <tr>
+      <th>Atendees</th>
+      <th>Dishes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @event.users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <%= user.dishes.each do |dish| %>
+        <td><%= dish.name %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= button_to "You Sure You Wanna Destroy this Potluck DAWG?", @event, :method => :delete %>
 <!-- hide this button if current user is not host  -->
 <%= link_to "join_event", new_dish_event_path(@event) %>
