@@ -45,7 +45,6 @@ class DishesController < ApplicationController
   end
 
   def create
-    byebug
     @user = current_user
     @dish = Dish.new(dish_params)
     # @dish.user = current_user # suga
