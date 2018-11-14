@@ -1,6 +1,23 @@
 <h1>All Potlucks</h1>
 
 <% @events.each do |event| %>
-  Potluck: <%= link_to event.name, event %> <br>
-  Date: <%= event.date %><br>
+  <div class="event-card">
+    <p class="event-name">
+      <%= link_to event.name, event %> <br>
+    </p>
+    <ul>
+      <li><%= event.date %></li>
+      <li><%= event.time %></li>
+      <li><%= event.location %></li>
+    </ul>
+    <div class="user-thumbnails">
+      <% event.users.each do |user| %>
+        <div class="thumbnail">
+          <%= image_tag(user.avatar.url(:thumb)) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 <% end %>
+
+<!-- check out https://www.groupmuse.com/calendar as style guide -->
