@@ -1,8 +1,14 @@
 <div class="home-container">
-    <h1>Potluck</h1>
-    <p>little description about the app</p>
-    <%= link_to "checkout events", events_path %>
-    <%= link_to "create your own event", new_event_path %>
-    <p></p>
+  <h1 class="potluck-logo">Potluck</h1>
+  <p>little description about the app</p>
+
+  <div class="button-container">
+    <div class="new-action-button">
+      <%= link_to "checkout events", events_path %>
+    </div>
+    <div class="new-action-button">
+        <%= link_to "create your own event", new_event_path %>
+    </div>
+  </div>
 </div>
 
