@@ -13,7 +13,6 @@ class Event < ApplicationRecord
   def format_time(event)
     formatted_time = DateTime.parse("#{event[:hour]}:#{event[:minute]}#{event[:meridiem]}")
     self.time = formatted_time.strftime("%I:%M%p")
-    byebug
     self.save
   end
 

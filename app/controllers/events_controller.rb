@@ -24,9 +24,9 @@ class EventsController < ApplicationController
   def create
     @user = current_user
     @event = Event.new(event_params)
+    @event.user_host_id = @user.id
     @event.format_time(params[:event])
     # @event.user  = current_user #that devise magic
-    byebug
     if @event.valid?
       @event.save
       @event_user = EventUser.create(event_id: @event.id, user_id: current_user.id)
@@ -54,14 +54,18 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event.destroy    
-    redirect_to events_path
+    if @event.user_host_id == current_user.id
+      @event.destroy    
+      redirect_to events_path
+    else 
+      redirect_to events_path
+    end 
   end
 
   private
 
     def event_params
-      params.require(:event).permit(:name,:date,:description,:location)
+      params.require(:event).permit(:name,:date,:description,:location, :user_host_id)
     end
 
     def find_event
