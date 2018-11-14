@@ -1,7 +1,9 @@
-<p>here somehow</p>
+<h1>Profile - <%= current_user.name %></h1>
 <%= image_tag(current_user.avatar.url(:thumb)) %><br>
 Name: <%= current_user.name %> <br>
 Email: <%= current_user.email %> <br>
 Location: <%= current_user.location %><br>
 About: <%= current_user.bio %><br>
+
+<%= link_to "Create a new potluck", new_event_path %>
 

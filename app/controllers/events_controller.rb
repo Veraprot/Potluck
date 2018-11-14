@@ -20,9 +20,16 @@ class EventsController < ApplicationController
   def create
     @user = current_user
     @event = Event.new(event_params)
-    @event.user = current_user #that devise magic
+    # @event.user  = current_user #that devise magic
     if @event.valid?
       @event.save
+      @event_user = EventUser.create(event_id: @event.id, user_id: current_user.id)
+      # @event.users = []
+      # if @event.users.include?(@user) 
+        # now u can edit it
+      # else 
+        # redirect_to somewhere 
+      # end 
       redirect_to @event
     else
       flash[:errors] = @event.errors.full_messages
