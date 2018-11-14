@@ -10,6 +10,13 @@ body {
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
+
+      .registration-links {
+        img {
+          height: 100px;
+          width: auto;
+        }
+      }
     }
   }
 }
