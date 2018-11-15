@@ -13,6 +13,15 @@
   }
 }
 
+.profile-card-outer-container {
+  &.dish-outer-container {
+    .title {
+      font-family: $pacifico;
+      text-transform: capitalize;
+    }
+  }
+}
+
 
 form {
   label {

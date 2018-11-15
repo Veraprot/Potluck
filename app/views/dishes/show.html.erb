@@ -1,7 +1,8 @@
-<div class="profile-card-outer-container">
-  <h1>Show me that dish</h1>
-  <h4><%= @dish.name %></h4>
-  <%= button_to "Delete this dish", @dish, :method => :delete%>
+<div class="profile-card-outer-container dish-outer-container">
+  <h1 class="title"><%= @dish.name %></h1>
+  <% if user_signed_in? && current_user.dishes.include?(@dish) %>
+    <%= button_to "Delete this dish", @dish, :method => :delete%>
+  <% end %>
 
   <div class="dish-recipes">
     <h1>Dish Suggestions</h1>
