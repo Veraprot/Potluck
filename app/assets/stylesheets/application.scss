@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed');
+@import 'font-awesome';
 
 // fonts 
 $roboto: 'Roboto Condensed', sans-serif;
@@ -13,13 +14,16 @@ $lemon: #DCB239;
 $hint-green: #83d084;
 $ocean-grey: rgba(57,72,88, 1);
 $ocean-grey-background: rgba(57,72,88, 0.8);
+$powder-background: rgba(143,	216,	210, 0.8);
+$peach-background: rgba(254, 220, 210, 0.8);
+$lemon-background: rgba(220,	178,	57, 0.8);
 $black-background: rgba(0, 0, 0, 0.8);
 
 @import "home.scss";
 @import "navbar.scss";
 @import "forms.scss";
 @import "profile-view.scss";
-
+@import "potluck-events.scss";
 abbr[title], 
 acronym[title] {
   display: none;
@@ -32,6 +36,10 @@ body {
   background-image: url('/assets/potluck-dinner-7.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+
+  li {
+    list-style-type: none;
+  }
 
   label,
   a,
