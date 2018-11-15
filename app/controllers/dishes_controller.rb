@@ -47,6 +47,7 @@ class DishesController < ApplicationController
   def create
     @event = Event.find_by(id: params[:id])
     @dish = Dish.new(dish_params)
+    # byebug
     if @dish.valid?
       @dish.save
       redirect_to event_path(@dish.event_id)
@@ -67,4 +68,3 @@ class DishesController < ApplicationController
     @dish = Dish.find_by(id: params[:id])
   end
 end # end of controller
-
