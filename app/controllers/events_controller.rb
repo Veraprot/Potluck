@@ -7,9 +7,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     #TODO Search function
-  end
-
-  def 
+  end 
 
   def new
     @event = Event.new
