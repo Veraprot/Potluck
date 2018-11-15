@@ -4,10 +4,14 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create,:edit,:destroy]
   
 
-  def index
-    @events = Event.all
-    #TODO Search function
-  end 
+  # def index
+  #   @events = Event.all
+  #   #TODO Search function
+  # end 
+
+  def index 
+    @events = Event.search(params[:search])
+  end
 
   def new
     @event = Event.new
@@ -59,7 +63,7 @@ class EventsController < ApplicationController
   private
 
     def event_params
-      params.require(:event).permit(:name,:date,:description,:location, :user_host_id)
+      params.require(:event).permit(:name,:date,:description,:location, :user_host_id,:search)
     end
 
     def find_event

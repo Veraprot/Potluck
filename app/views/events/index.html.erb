@@ -1,14 +1,16 @@
 <div class="potluck-events-container">
   <h1>All Potlucks</h1>
 
+<%# SEARCH! %>
   <div>  
-    <%= form_tag("/events", method: "get") do %>
-    <%= label_tag(:location_name) %>
-    <%= text_field_tag(:location_name) %>
-    <%= submit_tag("Search by location") %>
+    <%= form_tag(events_path, method: :get) do %>
+    <%= label_tag(:location, "Search by Location:") %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag("Search") %>
     <% end %>
   </div>
 
+<%# EVENT LIST! %>
 <% @events.each do |event| %>
     <%= link_to event, class: "event-card" do %>
       <div class="event-content">
