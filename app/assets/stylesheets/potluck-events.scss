@@ -12,11 +12,11 @@ body {
   }
   .potluck-events-container,
   .user-events {
-    .event-card {   
+    .event-card {
       p,
       li {
         text-transform: capitalize;
-      }   
+      }
 
       .event-name {
         font-size: 20px;
@@ -41,9 +41,13 @@ body {
         }
 
         .user-thumbnails {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
           img {
             height: 60px;
             border-radius: 20%;
+            margin-left: 5px;
           }
         }
       }
