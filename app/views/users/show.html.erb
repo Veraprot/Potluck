@@ -18,6 +18,36 @@
       </p>
     </h4>
   </div>
+  <div class="user-events">
+    <h1>My Events</h1>
+    <% current_user.events.each do |event| %>
+      <%= link_to event, class: "event-card" do %>
+        <div class="event-content user-content">
+          <p class="event-name">
+            <%= event.name %>
+          </p>
+          <ul>
+            <li>
+              <!-- <%= fa_icon "camera-retro" %> -->
+              <%= fa_icon "calendar" %>
+              <%= event.date %>
+            </li>
+            <li>
+              <%= event.time %>
+            </li>
+            <li><%= event.location %></li>
+          </ul>
+          <div class="user-thumbnails">
+            <% event.users.each do |user| %>
+              <div class="thumbnail">
+                <%= image_tag(user.avatar.url(:thumb), :class => "avatar-image") %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
   <div class="new-action-button">
     <%= link_to "Create a new potluck", new_event_path %>
   </div>
