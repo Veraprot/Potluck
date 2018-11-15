@@ -2,11 +2,13 @@
   <h1>All Potlucks</h1>
 
 <%# SEARCH! %>
-  <div>  
+  <div class="search-container">  
     <%= form_tag(events_path, method: :get) do %>
     <%= label_tag(:location, "Search by Location:") %>
-    <%= text_field_tag(:search, params[:search]) %>
-    <%= submit_tag("Search") %>
+    <div class="search-inner-container">
+      <%= text_field_tag(:search, params[:search]) %>
+      <%= submit_tag("Search", class: "search-button") %>
+    </div>
     <% end %>
   </div>
 

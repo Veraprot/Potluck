@@ -9,7 +9,25 @@ body {
       font-family: $pacifico;
       font-size: 50px;
     }
+
+    .search-container {
+      .search-inner-container {
+        display: flex;
+        margin: 10px 0px;
+
+        input[type=text] {
+          width: 80%;
+          margin: 0px;
+        }
+
+        .search-button {
+          margin-left: 8px;
+          text-align: center;
+        }
+      }
+    }
   }
+
   .potluck-events-container,
   .user-events,
   .dish-recipes {
