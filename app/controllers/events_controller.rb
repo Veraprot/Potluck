@@ -30,12 +30,6 @@ class EventsController < ApplicationController
     if @event.valid?
       @event.save
       @event_user = EventUser.create(event_id: @event.id, user_id: current_user.id)
-      # @event.users = []
-      # if @event.users.include?(@user) 
-        # now u can edit it
-      # else 
-        # redirect_to somewhere 
-      # end 
       redirect_to @event
     else
       flash[:errors] = @event.errors.full_messages
