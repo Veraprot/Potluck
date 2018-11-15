@@ -1,9 +1,11 @@
-<h1>Create a new dish</h1>
-<% if flash[:errors] %>
-  <% flash[:errors].each do |msg| %>
-    <li><%= msg %></li>
+<div class="form-wrapper">
+  <h1>Create a new dish</h1>
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= render 'form' %>
+  <%= render 'form' %>
+</div>
 
