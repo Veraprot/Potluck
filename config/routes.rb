@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   match 'user_root' => 'users#profile', :via => [:get]
   resources :dishes
 
-  resources :events #, only: %i[index new show create edit update]
+  resources :events
 
   get '/dishes/new/event/:id', to: "dishes#new", as: 'new_dish_event'
 

@@ -17,4 +17,15 @@ class Event < ApplicationRecord
     self.save
   end
 
+  # Class method Search
+  def self.search(search)
+
+    if search
+      self.where("location LIKE ?", "%#{search}%")
+    else
+      Event.all
+    end
+  end
+  
+
 end

@@ -4,10 +4,14 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only:[:new, :create,:edit,:destroy]
   
 
-  def index
-    @events = Event.all
-    #TODO Search function
-  end 
+  # def index
+  #   @events = Event.all
+  #   #TODO Search function
+  # end 
+
+  def index 
+    @events = Event.search(params[:search])
+  end
 
   def new
     @event = Event.new
@@ -30,12 +34,6 @@ class EventsController < ApplicationController
     if @event.valid?
       @event.save
       @event_user = EventUser.create(event_id: @event.id, user_id: current_user.id)
-      # @event.users = []
-      # if @event.users.include?(@user) 
-        # now u can edit it
-      # else 
-        # redirect_to somewhere 
-      # end 
       redirect_to @event
     else
       flash[:errors] = @event.errors.full_messages
@@ -65,7 +63,7 @@ class EventsController < ApplicationController
   private
 
     def event_params
-      params.require(:event).permit(:name,:date,:description,:location, :user_host_id)
+      params.require(:event).permit(:name,:date,:description,:location, :user_host_id,:search)
     end
 
     def find_event
