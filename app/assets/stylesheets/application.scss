@@ -31,7 +31,7 @@ body {
   background-image: url('/assets/potluck-dinner-7.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   label,
   a,
   h1, 
@@ -56,9 +56,9 @@ body {
     width: auto;
   }
 
+  .delete-button,
   .new-action-button {
     margin-right: 10px;
-    background-color: $lemon;
     border-radius: 5px;
     padding: 20px 10px;
     text-align: center;
@@ -66,5 +66,15 @@ body {
     a { 
       font-size: 20px;
     }
+  }
+
+  .new-action-button {
+    background-color: $lemon;
+  }
+
+  .delete-button {
+    background-color: $warm;
+    margin-top: 15px;
+    padding: 15px;
   }
 }
