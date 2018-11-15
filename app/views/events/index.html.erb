@@ -18,7 +18,7 @@
           <li><%= event.location %></li>
         </ul>
         <div class="user-thumbnails">
-          <% event.users.each do |user| %>
+          <% event.users.uniq.each do |user| %>
             <div class="thumbnail">
               <%= image_tag(user.avatar.url(:thumb), :class => "avatar-image") %>
             </div>
