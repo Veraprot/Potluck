@@ -11,8 +11,10 @@ body {
     }
   }
   .potluck-events-container,
-  .user-events {
-    .event-card {
+  .user-events,
+  .dish-recipes {
+    .event-card,
+    .dish-card {
       p,
       li {
         text-transform: capitalize;
@@ -32,7 +34,8 @@ body {
         cursor: pointer;
         border-radius: 4px;
 
-        &.user-content {
+        &.user-content,
+        &.dish-content {
           background-color: $powder-background;
         }
 

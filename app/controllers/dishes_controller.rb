@@ -6,21 +6,10 @@ class DishesController < ApplicationController
     @dishes = Dish.all
   end
 
-  # def create
-  #   @user = current_user
-  #   @dish = Dish.new(dish_params)
-  #   @dish.user = current_user # suga
-  #   if @dish.valid?
-  #     @dish.save
-  #     redirect_to @dish
-  #   else
-  #     flash[:errors] = @dish.errors.full_messages
-  #     redirect_to new_dish_path
-  #   end
-  # end
-
   def show
     # before_action finds the instance
+    @recipe_results = PuppyRecipeApi.query(@dish.name)
+    
   end
 
   def edit

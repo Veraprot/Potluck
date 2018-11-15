@@ -1,5 +1,25 @@
-<h1>Show me that dish</h1>
+<div class="profile-card-outer-container">
+  <h1>Show me that dish</h1>
+  <h4><%= @dish.name %></h4>
+  <%= button_to "Delete this dish", @dish, :method => :delete%>
 
-<%= @dish.name %>
+  <div class="dish-recipes">
+    <h1>Dish Suggestions</h1>
+    
+    <% @recipe_results.each do |recipe| %>
+      <%= link_to recipe["href"], class: "event-card dish" do %>
+        <div class="event-content dish-content">
+          <p>
+            <%= recipe["title"] %>
+          </p>
+          <div classs="ingredients-container">
+            <% recipe["ingredients"].split(",").each do |ingredient| %>
+              <h4 class="recipe-ingredient"><%= ingredient %></h4>
+            <% end %>
+          </div>
+        </div>
+      <% end  %>
+    <% end %>
+  </div>
+</div>
 
-<%= button_to "Delete this dish", @dish, :method => :delete%>
