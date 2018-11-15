@@ -1,14 +1,15 @@
 <div class="home-container">
-  <h1 class="potluck-logo">Potluck</h1>
-  <p>little description about the app</p>
+<!-- <img src="/assets/transparent_logo.png" alt="" class="potluck-logo"> -->
+<%= image_tag "transparent_logo.png" %>
+  <p>Welcome to Chipotluck, your go-to site for all things potlucky. Chipotluck was founded in 2018 by three incredible Flatiron students who were joined by their love of potlucks.
+    Go (pot)luck yourself!</p>
 
   <div class="button-container">
     <div class="new-action-button">
-      <%= link_to "checkout events", events_path %>
+      <%= link_to "Check Out All Potlucks", events_path %>
     </div>
     <div class="new-action-button">
-        <%= link_to "create your own event", new_event_path %>
+        <%= link_to "Make Your Own Potluck", new_event_path %>
     </div>
   </div>
 </div>
-
