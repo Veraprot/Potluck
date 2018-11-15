@@ -44,13 +44,28 @@ body {
   }
 
   label,
+  span,
   a,
-  h1, 
+  h1,
+  h2, 
   h4,
   p {
     margin: 0px;
     font-family: $roboto;
     color: white;
+  }
+
+  .file {
+    &.optional {
+      margin: 0px;
+      font-family: $roboto;
+      margin-left: 10px;
+      color: white;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
   }
 
   a {
@@ -89,7 +104,5 @@ body {
 
   .delete-button {
     background-color: $warm;
-    margin-top: 15px;
-    padding: 15px;
   }
 }

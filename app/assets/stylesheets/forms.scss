@@ -1,5 +1,7 @@
 .profile-card-outer-container,
-.form-wrapper { 
+.form-wrapper {
+  max-height: 400px;
+  overflow: scroll; 
   margin: 10% auto;
   padding: 5%;
   width: 65%;
@@ -43,7 +45,8 @@ form {
     width: 30%;
   }
 
-  .new-action-button{
+  .new-action-button, 
+  .delete-button {
     margin-top: 15px;
     padding: 15px;
   }

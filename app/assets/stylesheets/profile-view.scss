@@ -23,5 +23,11 @@ body {
       margin-top: 15px;
       width: 190px;
     }
+
+    .form-actions {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
   }
 }
