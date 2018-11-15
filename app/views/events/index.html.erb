@@ -1,6 +1,15 @@
 <div class="potluck-events-container">
   <h1>All Potlucks</h1>
-  <% @events.each do |event| %>
+
+  <div>  
+    <%= form_tag("/events", method: "get") do %>
+    <%= label_tag(:location_name) %>
+    <%= text_field_tag(:location_name) %>
+    <%= submit_tag("Search by location") %>
+    <% end %>
+  </div>
+
+<% @events.each do |event| %>
     <%= link_to event, class: "event-card" do %>
       <div class="event-content">
         <p class="event-name">
