@@ -6,7 +6,7 @@
     <h4>Time: <%= @event.time %></h4>
     <h4>Description: <%= @event.description %></h4>
     <h4>Location: <%= @event.location %></h4>
-    <table>
+    <table class="potluck-table">
       <thead>
         <tr>
           <th>Attendees</th>
@@ -17,9 +17,12 @@
         <% @event.users.uniq.each do |potluck_attendee| %>
           <tr>
             <td><%= link_to potluck_attendee.name, potluck_attendee %></td>
-            <% potluck_attendee.dishes.each do |dish| %>
-            <td><%= link_to dish.name, dish %></td>
-            <% end %>
+            <td>
+              <% potluck_attendee.dishes.each do |dish| %>
+                <%= link_to dish.name, dish %>
+                <span class="comma-separator">,</span>
+              <% end %>
+            </td>
           </tr>
         <% end %>
       </tbody>

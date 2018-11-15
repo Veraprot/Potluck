@@ -1,19 +1,20 @@
 body {
   .potluck-events-container {
-    width: 65%;
+    width: 55%;
     margin: 0 auto;
 
     h1 {
-      margin-top: 50px;
       text-align: center;
       font-family: $pacifico;
       font-size: 50px;
     }
 
-    .search-container {
+    .search-container {      
       .search-inner-container {
         display: flex;
+        justify-content: center;
         margin: 10px 0px;
+        max-width: 600px;
 
         input[type=text] {
           width: 80%;
@@ -89,6 +90,40 @@ body {
 
     .new-action-button {
       margin-top: 20px;
+    }
+
+    .potluck-table {
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    .potluck-table {
+      th, 
+      td {
+        text-align: center;
+        padding: 10px;
+        border-collapse: collapse;
+        border: none;
+
+        .comma-separator {
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+      thead {
+        tr {
+          background-color: $black-background;
+        }
+      }
+      tbody {
+        th,
+        tr {
+          &:nth-child(even) {
+            background-color: $black-background;
+          }
+        }
+      }
     }
   }
 }

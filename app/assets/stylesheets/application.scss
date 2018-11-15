@@ -17,7 +17,7 @@ $ocean-grey-background: rgba(57,72,88, 0.8);
 $powder-background: rgba(143,	216,	210, 0.8);
 $peach-background: rgba(254, 220, 210, 0.8);
 $lemon-background: rgba(220,	178,	57, 0.8);
-$black-background: rgba(0, 0, 0, 0.8);
+$black-background: rgba(0, 0, 0, 0.3);
 
 @import "home.scss";
 @import "navbar.scss";
@@ -59,7 +59,9 @@ body {
   h1,
   h2, 
   h4,
-  p {
+  p,
+  th,
+  tr {
     margin: 0px;
     font-family: $roboto;
     color: white;
@@ -95,6 +97,8 @@ body {
   .search-button,
   .delete-button,
   .new-action-button {
+    display: block;
+    width: 50%;
     color: white;
     font-family: $roboto;
     font-size: 15px;
@@ -121,10 +125,5 @@ body {
     width: calc(20% - 30px);
     height: 35px;
     padding: 0px;
-  }
-
-  .footer {
-    background-color: black;
-    height: 80px;
   }
 }
