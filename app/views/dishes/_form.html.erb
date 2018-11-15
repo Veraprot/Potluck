@@ -3,10 +3,10 @@
     <%= f.label :dish_name %>
     <%= f.text_field :name %>
 
-    <%= f.label :description %>
+    <%= f.label :dishcription %>
     <%= f.text_area :description %>
     <%= f.hidden_field :event_id, :value => params[:id] %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.submit "Create Your Dish!", class: "new-action-button" %>
+    <%= f.submit "Submit Your Dish!", class: "new-action-button" %>
   <% end %>
 </div>
