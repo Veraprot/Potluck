@@ -23,9 +23,8 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "Sign up", class: "new-action-button" %>
+      <%= render "users/shared/links" %>
     </div>
   <% end %>
-
-  <%= render "users/shared/links" %>
 </div>
