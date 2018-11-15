@@ -1,12 +1,18 @@
-body { 
+body {
   .home-container {
     width: 65%;
     margin: 0 auto;
 
-    .potluck-logo { 
-      margin-top: 40%;
+    .potluck-logo {
+      margin-top: 20%;
       text-align: center;
+      z-index: 1;
+
+      img {
+        width: 100%;
+      }
     }
+
 
     .button-container {
       display: flex;
