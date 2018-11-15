@@ -11,18 +11,14 @@
   </head>
 
   <body>
-    <div class="navbar">
-      <%= render partial: "/layouts/navbar" %>
-    </div>
-    <!-- <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %> -->
+    <!-- <div class="overlay"></div> -->
+    <div class="body-content-container">
+      <div class="navbar">
+        <%= render partial: "/layouts/navbar" %>
+      </div>
       <div class="body-inner-container">
         <%= yield %>
       </div>
-    <div class="footer"></div>
+    </div>
   </body>
 </html>
