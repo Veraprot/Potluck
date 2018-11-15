@@ -27,7 +27,7 @@ acronym[title] {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   margin: 0px;
   background-image: url('/assets/potluck-dinner-7.jpeg');
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ body {
   }
 
   .body-inner-container {
-    height: 100%;
+    min-height: 100%;
     margin: 0px 20px;
   }
 
