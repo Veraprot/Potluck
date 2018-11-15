@@ -43,4 +43,21 @@ body {
       }
     }
   }
+
+  .show-container {
+    margin: 10% auto;
+    padding: 5%;
+    width: 65%;
+    background-color: $ocean-grey-background;
+    border-radius: 5px;
+
+    h4 {
+      line-height: 30px;
+      text-transform: capitalize;
+    }
+
+    .new-action-button {
+      margin-top: 20px;
+    }
+  }
 }

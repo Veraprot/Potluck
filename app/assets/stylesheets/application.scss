@@ -28,11 +28,13 @@ abbr[title],
 acronym[title] {
   display: none;
 }
-
 html,
 body {
   min-height: 100%;
   margin: 0px;
+}
+
+body {
   background-image: url('/assets/potluck-dinner-7.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,6 +69,10 @@ body {
 
   .delete-button,
   .new-action-button {
+    display: block;
+    color: white;
+    font-family: $roboto;
+    font-size: 15px;
     margin-right: 10px;
     border-radius: 5px;
     padding: 20px 10px;
