@@ -14,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @event.users.each do |user| %>
+        <% @event.users.uniq.each do |user| %>
           <tr>
             <td><%= user.name %></td>
             <% user.dishes.each do |dish| %>
