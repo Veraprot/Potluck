@@ -14,11 +14,11 @@
         </tr>
       </thead>
       <tbody>
-        <% @event.users.uniq.each do |user| %>
+        <% @event.users.uniq.each do |potluck_attendee| %>
           <tr>
-            <td><%= user.name %></td>
-            <% user.dishes.each do |dish| %>
-            <td><%= dish.name %></td>
+            <td><%= link_to potluck_attendee.name, potluck_attendee %></td>
+            <% potluck_attendee.dishes.each do |dish| %>
+            <td><%= link_to dish.name, dish %></td>
             <% end %>
           </tr>
         <% end %>

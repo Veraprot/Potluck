@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   # before_action :find_user, only: [:edit, :update, :show]
+  before_action :find_user, only: [:show]
 
   def show
     # before_action finds the instance
@@ -11,7 +12,11 @@ class UsersController < ApplicationController
 
   def create
    @user = User.create(user_params)
-    #TODO Add validation 
+    #TODO Add validation
+  end
+
+  def profile
+    current_user 
   end
 
   private
@@ -23,5 +28,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name)
     end
-  
+
 end
