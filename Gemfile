@@ -68,3 +68,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'paperclip', '>=4.3.6'
 gem 'font-awesome-rails'
+gem 'httparty', '~> 0.13.7'
+gem 'rest-client'
+gem 'json'
