@@ -1,7 +1,7 @@
 <div class="profile-card-outer-container dish-outer-container">
   <h1 class="title"><%= @dish.name %></h1>
   <% if user_signed_in? && current_user.dishes.include?(@dish) %>
-    <%= button_to "Delete this dish", @dish, :method => :delete%>
+    <%= button_to "Delete this dish", @dish, class: "delete-button", :method => :delete%>
   <% end %>
 
   <div class="dish-recipes">
@@ -10,10 +10,10 @@
     <% @recipe_results.each do |recipe| %>
       <%= link_to recipe["href"], class: "event-card dish" do %>
         <div class="event-content dish-content">
-          <p>
+          <h1 class="dish-title">
             <%= recipe["title"] %>
-          </p>
-          <div classs="ingredients-container">
+          </h1>
+          <div class="ingredients-container">
             <% recipe["ingredients"].split(",").each do |ingredient| %>
               <h4 class="recipe-ingredient"><%= ingredient %></h4>
             <% end %>

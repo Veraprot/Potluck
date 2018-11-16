@@ -1,5 +1,6 @@
 body { 
-  .profile-card-outer-container {
+  .profile-card-outer-container,
+  .show-container {
     .profile-card-container { 
       display: flex;
 
@@ -25,6 +26,10 @@ body {
 
     .new-action-button {
       margin-top: 15px;
+      width: 190px;
+    }
+
+    .delete-button {
       width: 190px;
     }
 
