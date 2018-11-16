@@ -19,8 +19,10 @@
             <td><%= link_to potluck_attendee.name, potluck_attendee %></td>
             <td>
               <% potluck_attendee.dishes.each do |dish| %>
+                <% if dish.event_id == @event.id %>
                 <%= link_to dish.name, dish %>
                 <span class="comma-separator">,</span>
+                <% end %>
               <% end %>
             </td>
           </tr>
