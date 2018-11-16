@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto+Condensed');
 @import 'font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
 
-// fonts 
+// fonts
 $roboto: 'Roboto Condensed', sans-serif;
 $pacifico: 'Pacifico', cursive;
+$bad-script: 'Bad Script', cursive;
 
 // colors
 $powder: #8FD8D2;
@@ -18,13 +20,15 @@ $powder-background: rgba(143,	216,	210, 0.8);
 $peach-background: rgba(254, 220, 210, 0.8);
 $lemon-background: rgba(220,	178,	57, 0.8);
 $black-background: rgba(0, 0, 0, 0.3);
+$warm-background: rgba(223, 116, 74, 0.8);
+
 
 @import "home.scss";
 @import "navbar.scss";
 @import "forms.scss";
 @import "profile-view.scss";
 @import "potluck-events.scss";
-abbr[title], 
+abbr[title],
 acronym[title] {
   display: none;
 }
@@ -48,7 +52,7 @@ body {
   //   z-index: 1;
   //   background-color: rgba(0,0,0,0.5); /*dim the background*/
   // }
-  
+
   li {
     list-style-type: none;
   }
@@ -57,7 +61,7 @@ body {
   span,
   a,
   h1,
-  h2, 
+  h2,
   h4,
   p,
   th,
@@ -107,7 +111,7 @@ body {
     padding: 20px 10px;
     text-align: center;
 
-    a { 
+    a {
       font-size: 20px;
     }
   }

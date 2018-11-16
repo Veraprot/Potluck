@@ -1,7 +1,7 @@
 .profile-card-outer-container,
 .form-wrapper {
   max-height: 500px;
-  overflow: scroll; 
+  overflow: scroll;
   margin: 10% auto;
   padding: 5%;
   width: 65%;
@@ -16,7 +16,7 @@
 .profile-card-outer-container {
   &.dish-outer-container {
     .title {
-      font-family: $pacifico;
+      font-family: $bad-script;
       text-transform: capitalize;
     }
   }
@@ -30,7 +30,7 @@ form {
     }
   }
 
-  input[type=text], 
+  input[type=text],
   input[type=email],
   input[type=password],
   textarea,
@@ -54,7 +54,7 @@ form {
     width: 20%;
   }
 
-  .new-action-button, 
+  .new-action-button,
   .delete-button {
     margin-top: 15px;
     padding: 15px;

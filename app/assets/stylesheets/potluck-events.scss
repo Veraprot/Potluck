@@ -6,10 +6,11 @@ body {
     h1 {
       text-align: center;
       font-family: $pacifico;
+      font-weight: 100;
       font-size: 50px;
     }
 
-    .search-container {      
+    .search-container {
       .search-inner-container {
         display: flex;
         justify-content: center;
@@ -26,6 +27,12 @@ body {
           text-align: center;
         }
       }
+    }
+  }
+
+  .dish-recipes {
+    h1 {
+      font-family: $bad-script;
     }
   }
 
@@ -55,12 +62,21 @@ body {
 
         &.user-content,
         &.dish-content {
-          background-color: $powder-background;
+          background-color: $warm;
 
           .dish-title {
-            font-family: $pacifico;
+            font-family: $bad-script;
+            font-weight: 100;
             font-size: 24px;
             text-align: center;
+          }
+
+          .title-separator {
+            width: 100%;
+            background-color: white;
+            height: 2px;
+            margin-bottom: 20px;
+            border-radius: 3px;
           }
 
           .ingredients-container {
@@ -116,7 +132,7 @@ body {
     }
 
     .potluck-table {
-      th, 
+      th,
       td {
         text-align: center;
         padding: 10px;
