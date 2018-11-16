@@ -1,9 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
-root to: 'home#index'
-  resources :events, only: %i[index new show create edit update]
-  resources :users , only: %i[index show new create]
+  root to: 'home#index'
+
+
+  match 'user_root' => 'users#profile', :via => [:get]
+  resources :dishes
+
+  resources :events
+
+  get '/dishes/new/event/:id', to: "dishes#new", as: 'new_dish_event'
+
+  post '/dishes', to: "dishes#create"
+
+  match '/users/:id',     to: 'users#show',       via: 'get'
+
+  # devise_for :users, :path_prefix => 'd'
+
+  resources :users, :only =>[:show]
 
 end
