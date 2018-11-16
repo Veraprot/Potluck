@@ -71,3 +71,4 @@ gem 'font-awesome-rails'
 gem 'httparty', '~> 0.13.7'
 gem 'rest-client'
 gem 'json'
+

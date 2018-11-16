@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_11_14_171818) do
 
+
   create_table "dishes", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
@@ -48,12 +49,6 @@ ActiveRecord::Schema.define(version: 2018_11_14_171818) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.text "bio"
-    t.string "location"
-    t.string "avatar_file_name"
-    t.string "avatar_content_type"
-    t.bigint "avatar_file_size"
-    t.datetime "avatar_updated_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
