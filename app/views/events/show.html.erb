@@ -28,15 +28,17 @@
       </tbody>
     </table>
 
-    <% if user_signed_in? && current_user.id == @event.user_host_id %>
-      <%= button_to "Delete Potluck", @event, :method => :delete, class: "delete-button" %>
-    <% end %>
-    <!-- hide this button if current user is not host  -->
-    <% if user_signed_in? %>
-      <%= link_to "Join Event", new_dish_event_path(@event), class: "new-action-button" %>
-    <% else %>
-      <%= link_to "Sign In to Join Event", new_user_session_path, class: "new-action-button" %>
-    <% end %>
+    <div class="form-actions">
+      <% if user_signed_in? && current_user.id == @event.user_host_id %>
+        <%= button_to "Delete Potluck", @event, :method => :delete, class: "delete-button" %>
+      <% end %>
+      <!-- hide this button if current user is not host  -->
+      <% if user_signed_in? %>
+        <%= link_to "Join Event", new_dish_event_path(@event), class: "new-action-button" %>
+      <% else %>
+        <%= link_to "Sign In to Join Event", new_user_session_path, class: "new-action-button" %>
+      <% end %>
+    </div>
 
     <!-- this link should show if youre joined already -->
   </div>
