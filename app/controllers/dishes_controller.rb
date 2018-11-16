@@ -9,7 +9,7 @@ class DishesController < ApplicationController
   def show
     # before_action finds the instance
     @recipe_results = PuppyRecipeApi.query(@dish.name)
-    
+
   end
 
   def edit
@@ -25,7 +25,7 @@ class DishesController < ApplicationController
   def destroy
     # before_action finds the instance
     @dish.destroy
-    redirect_to dishes_path
+    redirect_to events_path
   end
 
   def new
