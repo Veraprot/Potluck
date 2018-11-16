@@ -28,7 +28,11 @@ body {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      align-items: center;
+      align-items: flex-end;
+
+      a {
+        margin-left: 10px;
+      }
     }
   }
 }
