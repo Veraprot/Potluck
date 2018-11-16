@@ -11,11 +11,13 @@
     </div>
   </div>
   <div class="profile-body-container">
-    <h4>About:
-      <p><%= current_user.bio %>
-            <!-- start slipsum code -->
-      </p>
-    </h4>
+    <% if current_user.bio.length > 0 %>
+      <h4>About:
+        <p><%= current_user.bio %>
+              <!-- start slipsum code -->
+        </p>
+      </h4>
+    <% end %>
   </div>
   <div class="user-events">
     <h1>My Events</h1>
