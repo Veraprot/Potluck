@@ -21,6 +21,10 @@ body {
 
       .new-action-button {
         margin-right: 10px;
+
+        &.warm {
+          background-color: $warm;
+        }
       }
     }
   }
