@@ -10,10 +10,10 @@
     <% @recipe_results.each do |recipe| %>
       <%= link_to recipe["href"], class: "event-card dish" do %>
         <div class="event-content dish-content">
-          <p>
+          <h1 class="dish-title">
             <%= recipe["title"] %>
-          </p>
-          <div classs="ingredients-container">
+          </h1>
+          <div class="ingredients-container">
             <% recipe["ingredients"].split(",").each do |ingredient| %>
               <h4 class="recipe-ingredient"><%= ingredient %></h4>
             <% end %>
