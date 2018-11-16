@@ -63,7 +63,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :test do
+group :production do
   # Adds support for Capybara system testing and selenium driver
   gem 'pg'
 end
